@@ -5,11 +5,11 @@ import com.project.fanyuzeng.daggerdemo.MainActivity;
 import dagger.Component;
 
 /**
- * @author:fanyuzeng
- * @date: 2017/11/3 15:58
- * @desc:
+ * @author: fanyuzeng on 2018/2/27 14:23
  */
-@Component(dependencies = PotComponent.class)
+@Component(dependencies = ZoomComponent.class)
 public interface MainActivityComponent {
-    void injectPot(MainActivity activity);
+
+    void inject(MainActivity activity);
+
 }
