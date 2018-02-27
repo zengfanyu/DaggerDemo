@@ -4,6 +4,8 @@ import com.project.fanyuzeng.daggerdemo.Animal;
 import com.project.fanyuzeng.daggerdemo.Zoom;
 import com.project.fanyuzeng.daggerdemo.di.annotation.TigerAnimal;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -13,6 +15,7 @@ import dagger.Provides;
 @Module
 public class ZoomModule {
     @Provides
+    @Singleton
     Zoom provideZoomWithTiger(@TigerAnimal Animal animal) {
         return new Zoom(animal);
     }
